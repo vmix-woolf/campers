@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setLocation, setForm, toggleEquipment } from '../../redux/filtersSlice'
 import { fetchCampers } from '../../redux/campersSlice'
 import styles from './Filters.module.css'
+import { FaMapMarkerAlt, FaCaravan, FaFan, FaUtensils, FaBath } from 'react-icons/fa'
 
 function Filters() {
     const dispatch = useDispatch()
@@ -13,7 +14,7 @@ function Filters() {
 
     return (
         <div className={styles.filters}>
-            <h3>Location</h3>
+            <h3><FaMapMarkerAlt />Location</h3>
             <input
                 type="text"
                 value={location}
@@ -21,7 +22,7 @@ function Filters() {
                 placeholder="Kyiv, Ukraine"
             />
 
-            <h3>Vehicle type</h3>
+            <h3><FaCaravan/>Vehicle type</h3>
             <label>
                 <input
                     type="radio"

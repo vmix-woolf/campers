@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleFavorite } from '../../redux/favoritesSlice'
 import styles from './CamperCard.module.css'
+import { FaHeart, FaRegHeart } from 'react-icons/fa'
 
 function CamperCard({ camper }) {
     const { id, name, price, location, description, gallery } = camper
@@ -22,13 +23,13 @@ function CamperCard({ camper }) {
                     <h2 className={styles.title}>{name}</h2>
                     <div className={styles.right}>
             <span className={styles.price}>
-              {`€${Number(price).toLocaleString('de-DE', { minimumFractionDigits: 2 })}`}
+              {`€${Number(price).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
             </span>
                         <button
                             className={`${styles.heart} ${isFavorite ? styles.active : ''}`}
                             onClick={() => dispatch(toggleFavorite(id))}
                         >
-                            ♥
+                            {isFavorite ? <FaHeart className={styles.activeHeart} /> : <FaRegHeart />}
                         </button>
                     </div>
                 </div>

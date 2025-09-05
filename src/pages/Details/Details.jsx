@@ -56,7 +56,7 @@ function Details() {
                 <div className={styles.mainContent}>
                     <h1>{name}</h1>
                     <p className={styles.price}>
-                        {`€${Number(price).toLocaleString('de-DE', { minimumFractionDigits: 2 })}`}
+                        {`€${Number(price).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
                     </p>
                     <p className={styles.location}>{location}</p>
 

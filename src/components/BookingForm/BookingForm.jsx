@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
 import styles from './BookingForm.module.css'
+import Loader from '../../components/Loader/Loader'
 
 const BookingSchema = Yup.object().shape({
     name: Yup.string().required('Required'),
@@ -48,7 +49,7 @@ function BookingForm() {
                         </label>
 
                         <button type="submit" disabled={isSubmitting}>
-                            Book now
+                            {isSubmitting ? <Loader /> : 'Book now'}
                         </button>
                     </Form>
                 )}
