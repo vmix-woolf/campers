@@ -4,16 +4,24 @@ import { api } from '../services/api'
 export const fetchCampers = createAsyncThunk(
     'campers/fetchCampers',
     async (_, thunkAPI) => {
+        const state = thunkAPI.getState()
+        const { location, form, equipment } = state.filters
+
+        let query = []
+        if (location) query.push(`location=${encodeURIComponent(location)}`)
+        if (form) query.push(`form=${encodeURIComponent(form)}`)
+        equipment.forEach(eq => query.push(`${eq}=true`))
+
+        const queryString = query.length ? `?${query.join('&')}` : ''
         try {
-            const response = await api.get('/campers')
-            console.log('API data:', response.data) // 👈 лог
+            const response = await api.get(`/campers${queryString}`)
             return response.data
         } catch (error) {
-            console.error('API error:', error) // 👈 лог
             return thunkAPI.rejectWithValue(error.message)
         }
     }
 )
+
 
 const campersSlice = createSlice({
     name: 'campers',

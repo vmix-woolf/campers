@@ -10,14 +10,16 @@ function Home() {
 
     return (
         <section className={styles.hero}>
-            <div className={styles.content}>
-                <h1 className={styles.title}>Travel Trucks</h1>
-                <p className={styles.subtitle}>
-                    Rent the perfect camper and start your adventure today
-                </p>
-                <button className={styles.button} onClick={handleClick}>
-                    View Now
-                </button>
+            <div className="container">
+                <div className={styles.content}>
+                    <h1 className={styles.title}>Campers of your dreams</h1>
+                    <p className={styles.subtitle}>
+                        You can find everything you want in our catalog
+                    </p>
+                    <button className={styles.button} onClick={handleClick}>
+                        View Now
+                    </button>
+                </div>
             </div>
         </section>
     )

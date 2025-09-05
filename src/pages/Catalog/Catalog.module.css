@@ -1,0 +1,35 @@
+.layout {
+    display: flex;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.filters {
+    flex: 0 0 280px;
+}
+
+.cards {
+    flex: 1;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.loadMore {
+    display: block;
+    margin: 30px auto 0;
+    padding: 12px 24px;
+    background-color: #e44848;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.loadMore:hover {
+    background-color: #d03737;
+}
