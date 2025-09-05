@@ -1,0 +1,14 @@
+.stars {
+    display: flex;
+    gap: 4px;
+}
+
+.active {
+    color: #ffc107; /* золотой */
+    font-size: 18px;
+}
+
+.inactive {
+    color: #e4e5e9;
+    font-size: 18px;
+}
