@@ -1,5 +1,15 @@
 .details {
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
     padding: 40px 0;
+}
+
+/* left side */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .price {
@@ -9,13 +19,13 @@
 
 .location {
     color: #475467;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .gallery {
     display: flex;
+    flex-wrap: wrap;
     gap: 12px;
-    margin: 20px 0;
 }
 
 .gallery img {
@@ -26,9 +36,11 @@
 }
 
 .description {
-    margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
+/* Tabs */
 .tabs {
     display: flex;
     gap: 12px;
@@ -41,6 +53,7 @@
     border-radius: 6px;
     background: #fff;
     cursor: pointer;
+    font-size: 14px;
 }
 
 .tabs button:hover {
@@ -53,6 +66,7 @@
     border-color: #e44848;
 }
 
+/* Features */
 .features ul {
     list-style: none;
     padding: 0;
@@ -60,4 +74,12 @@
 
 .features li {
     margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* right column */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
