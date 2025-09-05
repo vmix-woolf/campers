@@ -1,0 +1,20 @@
+.header {
+    padding: 16px;
+    background-color: #f7f7f7;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: #101828; /* тёмный цвет из палитры */
+    font-weight: 500;
+}
+
+.link:hover {
+    color: #e44848; /* красный из палитры */
+}
+
