@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     height: 100vh;
-    background-image: url('/banner.jpg');
+    background-image: url('/images/back-banner.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -10,24 +10,28 @@
     color: #fff;
 }
 
-
 /* Контент */
 .content {
     max-width: 500px;
 }
 
-/* Заголовок */
-.title {
-    font-size: 56px;
-    font-weight: 700;
-    margin-bottom: 16px;
+/* Принудительно применяем Inter к заголовкам внутри hero */
+.content h1 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0 0 16px 0;
+    white-space: nowrap;
 }
 
-/* Подзаголовок */
-.subtitle {
-    font-size: 22px;
-    margin-bottom: 32px;
-    line-height: 1.4;
+.content h2 {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.33;
+    margin: 0 0 32px 0;
+    white-space: nowrap;
 }
 
 /* Кнопка */
@@ -41,6 +45,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: background 0.3s ease;
+    font-family: 'Inter', sans-serif;
 }
 
 .button:hover {

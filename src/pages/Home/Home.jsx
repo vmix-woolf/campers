@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
-import styles from './Home.module.css'
 import Button from '../../components/ui/Button/Button'
+import typography from '../../components/ui/Typography/Typography.module.css'
+import styles from './Home.module.css'
 
 function Home() {
     const navigate = useNavigate()
@@ -13,10 +14,10 @@ function Home() {
         <section className={styles.hero}>
             <div className="container">
                 <div className={styles.content}>
-                    <h1 className={styles.title}>Campers of your dreams</h1>
-                    <p className={styles.subtitle}>
+                    <h1 className={typography.h1}>Campers of your dreams</h1>
+                    <h2 className={typography.h2}>
                         You can find everything you want in our catalog
-                    </p>
+                    </h2>
                     <Button variant="primary" onClick={handleClick}>
                         View Now
                     </Button>

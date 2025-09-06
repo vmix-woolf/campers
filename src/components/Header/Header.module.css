@@ -1,20 +1,72 @@
 .header {
-    padding: 16px;
     background-color: #f7f7f7;
+    padding: 24px 0;
+    border-bottom: 1px solid #dadde1;
 }
 
-.nav {
+.headerContent {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
 }
 
-.link {
+/* Логотип */
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #101828;
     text-decoration: none;
-    color: #101828; /* тёмный цвет из палитры */
+    letter-spacing: -0.01em;
+}
+
+.logo:hover {
+    color: #101828;
+}
+
+/* Навигация по центру */
+.nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+/* Ссылки навигации */
+.link {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
     font-weight: 500;
+    color: #101828;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: color 0.2s ease;
+    position: relative;
 }
 
 .link:hover {
-    color: #e44848; /* красный из палитры */
+    color: #d84343;
 }
 
+/* Активная ссылка */
+.link.active {
+    color: #d84343;
+    font-weight: 600;
+}
+
+/* Подчеркивание для активной ссылки */
+.link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: #d84343;
+    border-radius: 1px;
+}

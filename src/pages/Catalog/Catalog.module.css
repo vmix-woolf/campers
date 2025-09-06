@@ -1,15 +1,26 @@
 .layout {
     display: flex;
-    gap: 40px;
+    gap: 80px;
     padding: 40px 0;
+    align-items: flex-start;
 }
 
 .filters {
-    flex: 0 0 280px;
+    flex: 0 0 360px;
+    padding-right: 20px;
+    border-right: 1px solid #DADDE1;
 }
 
 .cards {
     flex: 1;
+}
+
+.cards > * {
+    margin-bottom: 32px;
+}
+
+.cards > *:last-child {
+    margin-bottom: 0;
 }
 
 .title {
