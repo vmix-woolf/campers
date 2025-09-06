@@ -1,7 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
-import Input from '../ui/Input/Input'
-import Textarea from '../ui/Textarea/Textarea'
 import Button from '../ui/Button/Button'
 import styles from './BookingForm.module.css'
 
@@ -15,7 +13,9 @@ const BookingSchema = Yup.object().shape({
 function BookingForm() {
     return (
         <div className={styles.formWrapper}>
-            <h3>Book your camper</h3>
+            <h3 className={styles.title}>Book your campervan now</h3>
+            <p className={styles.subtitle}>Stay connected! We are always ready to help you.</p>
+
             <Formik
                 initialValues={{ name: '', email: '', date: '', comment: '' }}
                 validationSchema={BookingSchema}
@@ -27,36 +27,51 @@ function BookingForm() {
             >
                 {({ isSubmitting, errors, touched }) => (
                     <Form className={styles.form}>
-                        <Field
-                            name="name"
-                            as={Input}
-                            label="Name"
-                            error={touched.name && errors.name}
-                        />
-                        <Field
-                            name="email"
-                            as={Input}
-                            type="email"
-                            label="Email"
-                            error={touched.email && errors.email}
-                        />
-                        <Field
-                            name="date"
-                            as={Input}
-                            type="date"
-                            label="Date"
-                            error={touched.date && errors.date}
-                        />
-                        <Field
-                            name="comment"
-                            as={Textarea}
-                            label="Comment"
-                            error={touched.comment && errors.comment}
-                        />
+                        <div className={styles.fieldGroup}>
+                            <Field
+                                name="name"
+                                type="text"
+                                placeholder="Name*"
+                                className={`${styles.input} ${touched.name && errors.name ? styles.inputError : ''}`}
+                            />
+                            <ErrorMessage name="name" component="div" className={styles.error} />
+                        </div>
 
-                        <Button type="submit" disabled={isSubmitting}>
-                            {isSubmitting ? 'Booking...' : 'Book now'}
-                        </Button>
+                        <div className={styles.fieldGroup}>
+                            <Field
+                                name="email"
+                                type="email"
+                                placeholder="Email*"
+                                className={`${styles.input} ${touched.email && errors.email ? styles.inputError : ''}`}
+                            />
+                            <ErrorMessage name="email" component="div" className={styles.error} />
+                        </div>
+
+                        <div className={styles.fieldGroup}>
+                            <Field
+                                name="date"
+                                type="date"
+                                placeholder="Booking date*"
+                                className={`${styles.input} ${touched.date && errors.date ? styles.inputError : ''}`}
+                            />
+                            <ErrorMessage name="date" component="div" className={styles.error} />
+                        </div>
+
+                        <div className={styles.fieldGroup}>
+                            <Field
+                                name="comment"
+                                as="textarea"
+                                placeholder="Comment"
+                                className={`${styles.textarea} ${touched.comment && errors.comment ? styles.inputError : ''}`}
+                            />
+                            <ErrorMessage name="comment" component="div" className={styles.error} />
+                        </div>
+
+                        <div className={styles.buttonContainer}>
+                            <Button variant="primary" type="submit" disabled={isSubmitting}>
+                                {isSubmitting ? 'Sending...' : 'Send'}
+                            </Button>
+                        </div>
                     </Form>
                 )}
             </Formik>

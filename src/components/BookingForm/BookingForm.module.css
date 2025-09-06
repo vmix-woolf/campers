@@ -1,49 +1,91 @@
 .formWrapper {
-    padding: 20px;
-    border: 1px solid #dadde1;
-    border-radius: 12px;
-    background-color: #fff;
+    padding: 44px 57px;
+    border: 1px solid #DADDE1;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #101828;
+    margin: 0 0 8px 0;
+}
+
+.subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #6C717B;
+    margin: 0 0 24px 0;
+    line-height: 1.25;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 24px;
 }
 
-label {
+.fieldGroup {
     display: flex;
     flex-direction: column;
-    font-size: 14px;
-    font-weight: 500;
-    gap: 6px;
+    gap: 8px;
+    width: 100%;
 }
 
-input,
-textarea {
-    padding: 8px;
-    border: 1px solid #dadde1;
-    border-radius: 6px;
-    font-size: 14px;
+.input,
+.textarea {
+    width: 100%;
+    padding: 18px;
+    background: #F7F7F7;
+    border: 1px solid #DADDE1;
+    border-radius: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #101828;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #6C717B;
+}
+
+.input:focus,
+.textarea:focus {
+    background: #FFFFFF;
+    border-color: #E44848;
+    box-shadow: 0 0 0 1px #E44848;
+}
+
+.textarea {
+    min-height: 114px;
+    resize: vertical;
+    font-family: 'Inter', sans-serif;
+}
+
+.inputError {
+    border-color: #E44848;
+    box-shadow: 0 0 0 1px #E44848;
 }
 
 .error {
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
-    color: red;
+    color: #E44848;
+    margin-top: 4px;
 }
 
-button {
-    margin-top: 10px;
-    padding: 12px;
-    background-color: #e44848;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-button:hover {
-    background-color: #d03737;
+.buttonContainer button {
+    width: auto !important;
+    min-width: 166px;
+    padding: 16px 60px !important;
 }

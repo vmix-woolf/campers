@@ -90,8 +90,6 @@
 }
 
 .filterButton svg {
-    width: 32px;
-    height: 32px;
     color: #101828;
 }
 
@@ -108,8 +106,16 @@
     color: #E44848;
 }
 
-/* Search button */
-.searchButton {
+/* Search button container */
+.buttonContainer {
+    display: flex;
+    justify-content: center;
     width: 100%;
     margin-top: 24px;
+}
+
+.buttonContainer button {
+    width: auto !important;
+    min-width: 166px;
+    padding: 16px 60px !important;
 }

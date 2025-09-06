@@ -11,7 +11,7 @@
 
   /* Container */
   --container-width: 1440px;
-  --container-padding: 1rem;
+  --container-padding: 64px;
 
   /* Font sizes */
   --font-size-base: 16px;
@@ -45,5 +45,5 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: var(--container-padding);
   padding-right: var(--container-padding);
   margin-left: auto;
-  margin-right: var(--container-right);
+  margin-right: auto;
 }
