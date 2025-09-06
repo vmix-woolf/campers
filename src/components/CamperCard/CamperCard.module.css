@@ -1,89 +1,98 @@
 .card {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     padding: 24px;
+    background: #fff;
     border: 1px solid #dadde1;
-    border-radius: 12px;
-    margin-bottom: 24px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-radius: 20px;
 }
 
 .image {
-    width: 250px;
-    height: 200px;
+    width: 292px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .content {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    margin-bottom: 8px;
 }
 
 .title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
-}
-
-.price {
-    font-size: 18px;
-    font-weight: 700;
     color: #101828;
-}
-
-.location {
-    font-size: 14px;
-    color: #475467;
-    margin: 6px 0;
-}
-
-.description {
-    font-size: 14px;
-    color: #475467;
-    margin-bottom: 10px;
-}
-
-.button {
-    display: inline-block;
-    background-color: #e44848;
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.3s ease;
-}
-
-.button:hover {
-    background-color: #d03737;
+    margin: 0;
 }
 
 .right {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #101828;
+}
+
+/* ❤️ Стили для кнопки-сердца */
 .heart {
-    background: none;
+    background: transparent; /* Убираем любой фон */
     border: none;
+    padding: 0;
     cursor: pointer;
-    font-size: 20px;
-    color: #ccc;
+    font-size: 24px;
+    color: #101828;
     transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .heart:hover {
+    background: transparent !important; /* Принудительно убираем фон при ховере */
     color: #e44848;
 }
 
-.active {
+.heart.active .activeHeart {
     color: #e44848;
+}
+
+.activeHeart {
+    color: #e44848;
+}
+
+.location {
+    font-size: 16px;
+    color: #6c727f;
+    margin: 0 0 24px 0;
+}
+
+.description {
+    font-size: 16px;
+    color: #475467;
+    line-height: 1.5;
+    margin: 0 0 24px 0;
+    flex: 1;
+}
+
+/* 🔗 Стили для ссылки с кнопкой */
+.button {
+    text-decoration: none;
+    align-self: flex-start; /* Кнопка не растягивается на всю ширину */
+}
+
+.button:hover {
+    background: transparent !important; /* Убираем любой фон у ссылки */
 }

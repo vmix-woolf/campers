@@ -1,7 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import Input from '../ui/Input/Input'
+import Textarea from '../ui/Textarea/Textarea'
+import Button from '../ui/Button/Button'
 import styles from './BookingForm.module.css'
-import Loader from '../../components/Loader/Loader'
 
 const BookingSchema = Yup.object().shape({
     name: Yup.string().required('Required'),
@@ -23,34 +25,38 @@ function BookingForm() {
                     resetForm()
                 }}
             >
-                {({ isSubmitting }) => (
+                {({ isSubmitting, errors, touched }) => (
                     <Form className={styles.form}>
-                        <label>
-                            Name
-                            <Field name="name" type="text" />
-                            <ErrorMessage name="name" component="div" className={styles.error} />
-                        </label>
+                        <Field
+                            name="name"
+                            as={Input}
+                            label="Name"
+                            error={touched.name && errors.name}
+                        />
+                        <Field
+                            name="email"
+                            as={Input}
+                            type="email"
+                            label="Email"
+                            error={touched.email && errors.email}
+                        />
+                        <Field
+                            name="date"
+                            as={Input}
+                            type="date"
+                            label="Date"
+                            error={touched.date && errors.date}
+                        />
+                        <Field
+                            name="comment"
+                            as={Textarea}
+                            label="Comment"
+                            error={touched.comment && errors.comment}
+                        />
 
-                        <label>
-                            Email
-                            <Field name="email" type="email" />
-                            <ErrorMessage name="email" component="div" className={styles.error} />
-                        </label>
-
-                        <label>
-                            Date
-                            <Field name="date" type="date" />
-                            <ErrorMessage name="date" component="div" className={styles.error} />
-                        </label>
-
-                        <label>
-                            Comment
-                            <Field name="comment" as="textarea" rows="4" />
-                        </label>
-
-                        <button type="submit" disabled={isSubmitting}>
-                            {isSubmitting ? <Loader /> : 'Book now'}
-                        </button>
+                        <Button type="submit" disabled={isSubmitting}>
+                            {isSubmitting ? 'Booking...' : 'Book now'}
+                        </Button>
                     </Form>
                 )}
             </Formik>

@@ -5,6 +5,8 @@ import CamperCard from '../../components/CamperCard/CamperCard'
 import styles from './Catalog.module.css'
 import Filters from '../../components/Filters/Filters'
 import Loader from '../../components/Loader/Loader'
+import Button from '../../components/ui/Button/Button'
+
 
 function Catalog() {
     const dispatch = useDispatch()
@@ -38,9 +40,9 @@ function Catalog() {
                             ))}
 
                             {limit < items.length && (
-                                <button className={styles.loadMore} onClick={handleLoadMore} disabled={isLoading}>
+                                <Button variant="secondary" onClick={handleLoadMore} disabled={isLoading}>
                                     {isLoading ? <Loader /> : 'Load more'}
-                                </button>
+                                </Button>
                             )}
                         </>
                     )}

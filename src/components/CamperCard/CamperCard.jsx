@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { toggleFavorite } from '../../redux/favoritesSlice'
 import styles from './CamperCard.module.css'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
+import Button from '../ui/Button/Button'
 
 function CamperCard({ camper }) {
     const { id, name, price, location, description, gallery } = camper
@@ -26,8 +27,10 @@ function CamperCard({ camper }) {
               {`€${Number(price).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
             </span>
                         <button
+                            type="button"
                             className={`${styles.heart} ${isFavorite ? styles.active : ''}`}
                             onClick={() => dispatch(toggleFavorite(id))}
+                            aria-label="Toggle favorite"
                         >
                             {isFavorite ? <FaHeart className={styles.activeHeart} /> : <FaRegHeart />}
                         </button>
@@ -40,7 +43,7 @@ function CamperCard({ camper }) {
                     target="_blank"
                     className={styles.button}
                 >
-                    Show more
+                    <Button variant="primary">Show more</Button>
                 </Link>
             </div>
         </div>

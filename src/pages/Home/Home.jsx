@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import styles from './Home.module.css'
+import Button from '../../components/ui/Button/Button'
 
 function Home() {
     const navigate = useNavigate()
@@ -16,9 +17,9 @@ function Home() {
                     <p className={styles.subtitle}>
                         You can find everything you want in our catalog
                     </p>
-                    <button className={styles.button} onClick={handleClick}>
+                    <Button variant="primary" onClick={handleClick}>
                         View Now
-                    </button>
+                    </Button>
                 </div>
             </div>
         </section>
