@@ -28,7 +28,6 @@
     border-bottom: 1px solid #DADDE1;
 }
 
-/* Location input */
 .locationInput {
     position: relative;
 }
@@ -63,7 +62,6 @@
     box-shadow: 0 0 0 1px #E44848;
 }
 
-/* Filter buttons grid */
 .filterGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

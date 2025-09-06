@@ -52,7 +52,7 @@ function Details() {
         rating,
     } = item
 
-    // Создаем массив badges для features
+
     const badges = []
     if (transmission === 'automatic') badges.push({ label: 'Automatic', icon: 'diagram' })
     if (engine === 'petrol' || engine === 'diesel') badges.push({ label: engine === 'petrol' ? 'Petrol' : 'Diesel', icon: 'fuel-pump' })

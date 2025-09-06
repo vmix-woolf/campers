@@ -48,7 +48,6 @@
     color: #101828;
 }
 
-/* Сердце */
 .heart {
     background: transparent;
     border: none;
@@ -75,7 +74,6 @@
     color: #e44848;
 }
 
-/* Вторая строка: рейтинг и локация */
 .info {
     display: flex;
     align-items: center;
@@ -114,7 +112,6 @@
     font-size: 16px;
 }
 
-/* Описание */
 .description {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -124,7 +121,6 @@
     flex: 1;
 }
 
-/* Badges */
 .badges {
     display: flex;
     gap: 8px;
@@ -153,7 +149,6 @@
     white-space: nowrap;
 }
 
-/* Кнопка */
 .button {
     text-decoration: none;
     align-self: flex-start;

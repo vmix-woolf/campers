@@ -10,7 +10,6 @@
     color: #fff;
 }
 
-/* Контент */
 .content {
     max-width: 500px;
 }
@@ -32,7 +31,6 @@
     margin: 0 0 32px 0;
 }
 
-/* Кнопка */
 .button {
     background-color: #e44848;
     color: #fff;

@@ -8,12 +8,10 @@ function Header() {
         <header className={styles.header}>
             <div className="container">
                 <div className={styles.headerContent}>
-                    {/* Логотип */}
                     <Link to="/" className={styles.logo}>
                         TravelTrucks
                     </Link>
 
-                    {/* Навигация */}
                     <nav className={styles.nav}>
                         <Link
                             to="/"

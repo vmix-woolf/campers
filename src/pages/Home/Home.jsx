@@ -12,17 +12,15 @@ function Home() {
 
     return (
         <section className={styles.hero}>
-            {/*<div className="container">*/}
-                <div className={styles.content}>
-                    <h1 className={typography.h1}>Campers of your dreams</h1>
-                    <h2 className={typography.h2}>
-                        You can find everything you want in our catalog
-                    </h2>
-                    <Button variant="primary" onClick={handleClick}>
-                        View Now
-                    </Button>
-                </div>
-            {/*</div>*/}
+            <div className={styles.content}>
+                <h1 className={typography.h1}>Campers of your dreams</h1>
+                <h2 className={typography.h2}>
+                    You can find everything you want in our catalog
+                </h2>
+                <Button variant="primary" onClick={handleClick}>
+                    View Now
+                </Button>
+            </div>
         </section>
     )
 }
